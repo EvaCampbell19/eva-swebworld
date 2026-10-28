@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eva Campbell · Web Developer and Designer</title>
+<meta name="description" content="Eva Campbell is a full-stack web developer and designer: WordPress, Shopify, funnels, automation and AI-powered development.">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07040f;--panel:#120a24;--text:#f3ecff;--muted:#a99bc8;--a:#ff3da6;--b:#27e8f5;--line:#3a2a5e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--onA:#07040f}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff;--panel:#f5f0ff;--text:#1a1030;--muted:#5b4a80;--line:#cdbfee;--a:#d6187f;--b:#0a7f93;--onA:#fff}}
+:root[data-theme="light"]{--bg:#fff;--panel:#f5f0ff;--text:#1a1030;--muted:#5b4a80;--line:#cdbfee;--a:#d6187f;--b:#0a7f93;--onA:#fff;color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:22px/1.35 'VT323',ui-monospace,monospace}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.12) 0 1px,transparent 1px 3px);opacity:.5}
+a{color:var(--b)}
+h1,h2,h3,.px{font-family:'Press Start 2P',monospace;font-weight:400;line-height:1.5}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:12px 20px;background:var(--panel);border-bottom:2px solid var(--line)}
+nav .logo{font-family:'Press Start 2P';font-size:13px;color:var(--a);margin-right:auto}
+nav a{color:var(--text);text-decoration:none}nav a:hover{color:var(--a)}
+button{font:inherit;cursor:pointer;background:none;color:var(--b);border:2px solid var(--b);padding:2px 10px}
+section,header{max-width:980px;margin:0 auto;padding:26px 20px}
+header{padding-top:36px}
+.status{color:var(--muted);border-left:4px solid var(--a);padding-left:10px}
+h1{font-size:clamp(30px,8vw,64px);margin:18px 0;color:var(--a);text-shadow:4px 4px 0 var(--b)}
+h2{font-size:clamp(16px,3.5vw,24px);margin:0 0 10px;color:var(--b)}
+h3{font-size:12px;margin:8px 0;color:var(--a)}
+.btn{display:inline-block;padding:10px 18px;margin:6px 8px 6px 0;font-family:'Press Start 2P';font-size:12px;text-decoration:none;background:var(--a);color:var(--onA);box-shadow:4px 4px 0 var(--b)}
+.btn.alt{background:none;color:var(--b);border:2px solid var(--b);box-shadow:none}
+.coins{margin-left:6px;color:var(--muted)}
+.lead{max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:20px}
+.card{background:var(--panel);border:2px solid var(--line);padding:16px}
+.card:hover{border-color:var(--a)}
+.card b{color:var(--b)}
+.big{font-family:'Press Start 2P';font-size:28px;color:var(--a)}
+.bar{height:14px;background:var(--panel);border:2px solid var(--line);margin:4px 0 14px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b));width:0;transition:width 1.2s steps(14)}
+.bar:hover i{filter:brightness(1.3)}
+.world{margin:18px 0}.world a{display:inline-block;margin:4px 12px 4px 0}
+.tags span{display:inline-block;border:2px solid var(--line);padding:0 10px;margin:4px 6px 4px 0}
+pre{background:var(--panel);border:2px solid var(--line);padding:14px;overflow-x:auto;max-width:100%;font:20px/1.3 'VT323',monospace;color:var(--b)}
+.todo{color:var(--a)}
+.spin{animation:spin .5s}@keyframes spin{50%{transform:rotateY(180deg)}}
+.cab{position:relative;margin-top:20px;padding:30px 24px;text-align:center;background:linear-gradient(180deg,var(--panel),var(--bg));border:4px solid var(--a);box-shadow:0 0 0 4px var(--bg),0 0 0 8px var(--b),0 0 40px rgba(255,61,166,.35);overflow:hidden}
+.cab::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 38px,rgba(39,232,245,.07) 38px 40px);pointer-events:none}
+.cab>*{position:relative}
+.cab .insert{font-size:clamp(20px,5vw,36px);color:var(--a);text-shadow:3px 3px 0 var(--b);margin:0 0 12px}
+.cab form{display:grid;gap:10px;max-width:480px;margin:18px auto;text-align:left}
+.cab input,.cab textarea{font:inherit;font-size:22px;width:100%;padding:8px 12px;background:var(--bg);color:var(--text);border:2px solid var(--line)}
+.cab input:focus,.cab textarea:focus{outline:none;border-color:var(--b);box-shadow:0 0 0 3px rgba(39,232,245,.3)}
+.cab .btn{border:0;cursor:pointer;justify-self:center}
+.slot{width:90px;height:14px;margin:0 auto 14px;background:#000;border:3px solid var(--b);border-radius:4px;box-shadow:inset 0 0 8px var(--a)}
+.cont{font-size:12px;color:var(--muted);margin:14px 0 0}
+.blink{animation:blink 1.1s steps(2) infinite}@keyframes blink{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.blink{animation:none}}
+#stage{border:4px solid var(--a);box-shadow:0 0 0 4px var(--bg),0 0 0 8px var(--b);cursor:pointer;touch-action:manipulation;user-select:none;-webkit-user-select:none;margin:22px 8px;line-height:0}
+#stage:focus-visible{outline:3px solid var(--b);outline-offset:10px}
+#stage canvas{width:100%;height:auto;display:block;image-rendering:pixelated}
+.pu .card p{margin:0}.pu .ic{font-size:30px;display:block}.pu .card{transition:transform .15s,border-color .15s}.pu .card:hover{transform:translateY(-3px)}
+@media (prefers-reduced-motion:reduce){.pu .card{transition:none}.pu .card:hover{transform:none}}
+.pp{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px}
+.pp div{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center;background:var(--panel);border:2px solid var(--line);padding:8px 12px}
+.pp div:hover{border-color:var(--a)}
+.pp span{grid-row:span 2;font-size:26px}.pp b{color:var(--b);font-weight:400;line-height:1}.pp i{font-style:normal;color:var(--muted);font-size:19px;line-height:1.1}
+footer{text-align:center;color:var(--muted);padding:40px 20px 60px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">EVA.EXE</span>
+  <a href="#quests">Quests</a><a href="#ai">AI Lab</a><a href="#about">Stats</a><a href="#skills">Skills</a><a href="#worlds">Levels</a><a href="#contact">Contact</a>
+  <button id="theme" aria-label="Switch between dark and light mode">☀</button>
+</nav>
+
+<header>
+  <p class="status" id="status">Eva is ready. Press start.</p>
+  <h1>Eva Campbell</h1>
+  <p class="lead">I design and build fast, good-looking websites, funnels and automations. I turn Figma files into live sites and messy workflows into things that just run.</p>
+  <a class="btn" href="#worlds">Select level</a><a class="btn alt" href="#contact">Hire Eva</a>
+  <p><button id="coin" aria-label="Go to the game">🪙 Coins: <b id="coins">0</b></button></p>
+</header>
+
+<section id="quests">
+  <h2>Quests I take on</h2>
+  <p>Pick a quest. I handle the build, the wiring and the cleanup.</p>
+  <div class="grid">
+    <div class="card">🧱<h3>Custom web apps</h3>PHP, Laravel and CodeIgniter builds with MySQL behind them, plus React and React Native front ends.</div>
+    <div class="card">🎨<h3>WordPress and Shopify</h3>Elementor, Divi and WPBakery sites, plus Shopify theme tweaks, product updates and upkeep.</div>
+    <div class="card">🎯<h3>Landing pages and funnels</h3>ClickFunnels, Kartra, Kajabi, Leadpages, Instapage and Unbounce pages built to convert.</div>
+    <div class="card">⚡<h3>Automation and CRM</h3>GoHighLevel, Zapier and Zoho CRM: forms, triggers, pipelines and lead routing that run on their own.</div>
+    <div class="card">✏️<h3>UI/UX design</h3>Wireframes and prototypes in Figma, Illustrator, Photoshop and InDesign, then PSD or Figma to responsive code.</div>
+    <div class="card">📈<h3>Tracking and upkeep</h3>Google Ads, Analytics events, Facebook Pixel and UTMs, plus hosting, DNS, SEO and caching.</div>
+  </div>
+</section>
+
+<section id="ai">
+  <h2>AI lab</h2>
+  <p class="lead">I set up AI-powered development workflows end to end, from a prompt in Claude Code to a live deploy on Vercel, guided by a written playbook the AI actually follows.</p>
+<pre id="sess">&gt; claude "add a pricing section to the home page"
+Reading playbook.md ...
+Plan: 3 small tasks, 1 file each
+Diff ready for review. Nothing merges unread.</pre>
+  <div class="tags"><span>Claude Code</span><span>Next.js</span><span>Node.js</span><span>Vercel</span><span>Git</span><span>WordPress</span><span>Markdown playbooks</span></div>
+  <div class="grid">
+    <div class="card"><b>Write the rules down</b><br>One markdown file is the source of truth for stack, style and what never to touch.</div>
+    <div class="card"><b>Think small</b><br>Break work into small tasks so every change is easy to review.</div>
+    <div class="card"><b>Review every diff</b><br>AI drafts, a human decides. Nothing merges unread.</div>
+    <div class="card"><b>Guard the secrets</b><br>Keys live in environment variables, never in prompts or commits.</div>
+  </div>
+  <p><button id="copy">Copy starter playbook.md</button> <span id="copied" class="status" hidden>Copied.</span></p>
+</section>
+
+<section id="about">
+  <h2>Eva’s stats</h2>
+  <p>The short version of who is behind the keyboard.</p>
+  <div class="grid">
+    <div class="card"><div class="big">6+</div>years designing and building for the web</div>
+    <div class="card"><div class="big">20+</div>live sites in PHP, WordPress and Shopify</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skill tree</h2>
+  <p>Bars fill as you scroll. Hover a bar to power it up.</p>
+  <div id="bars"></div>
+</section>
+
+<section id="worlds">
+  <h2>Level select</h2>
+  <p>Real projects, grouped by world. Click a level to play.</p>
+  <div class="world"><h3>World WordPress</h3><a href="https://blissagency.it/">blissagency.it</a><a href="https://nuacreativos.com/">nuacreativos.com</a><a href="https://grofflandscapedesign.com">grofflandscapedesign.com</a><a href="https://mamabirdinc.com">mamabirdinc.com</a></div>
+  <div class="world"><h3>World Shopify</h3><a href="https://milkshirts.com">milkshirts.com</a><a href="https://codeglo.com">codeglo.com</a><a href="https://toneitup.com">toneitup.com</a><a href="https://vanmenno.nl">vanmenno.nl</a></div>
+  <div class="world"><h3>World Funnels</h3><a href="https://app.gohighlevel.com/v2/preview/BCX2h0nJ5kZwlBs8a6Zi?notrack=true">HighLevel funnel 1</a><a href="https://app.gohighlevel.com/v2/preview/kLYFVwcLucwLsZ6giOWi">HighLevel funnel 2</a><a href="https://app.gohighlevel.com/v2/preview/xiHORVOnSbKNpMUbK1qN?notrack=true">HighLevel funnel 3</a><a href="https://app.funnelstreams.com/v2/preview/EOUZ71hmdFGDI7eqh6VS">Funnelstreams build</a></div>
+  <div class="world"><h3>World PHP</h3><a href="https://benoitassociates.com">benoitassociates.com</a><a href="https://sv-life.ru">sv-life.ru</a><a href="https://graphicszoo.com">graphicszoo.com</a></div>
+  <div class="world"><h3>World Figma</h3><a href="https://www.figma.com/design/34RkXDGUuC2bloi5a7wRRL/Print-Berry?m=auto&t=tK1n4JavoR9LSu1g-6">Print Berry</a><a href="https://www.figma.com/design/Q8QA9gpqXN0niPdos7aodt/Lawnderlust?m=auto&t=tK1n4JavoR9LSu1g-6">Lawnderlust</a><a href="https://www.figma.com/design/CRwfRuBzsPV3Ywbn3wCIJc/Blisswell?m=auto&t=tK1n4JavoR9LSu1g-6">Blisswell</a><a href="https://www.figma.com/design/5pubMS3jYuHqr26i2YGZMf/Onboard-Me---Website?m=auto&t=tK1n4JavoR9LSu1g-6">Onboard Me website</a><a href="https://www.figma.com/design/YP4eLK8Pud1emhGttV294d/Maurice-Meade?node-id=44-20&t=NGSrrFuL8T3WBzeR-0">Maurice Meade</a></div>
+</section>
+
+<section id="game">
+  <h2>Bonus stage</h2>
+  <p>Tap the stage to jump. Dodge the blocks and grab the coins.</p>
+  <div id="stage" role="button" tabindex="0" aria-label="Game stage. Tap to jump."><canvas id="cv" width="900" height="240"></canvas></div>
+  <p class="status" id="gs">Tap the stage to start.</p>
+</section>
+
+<section id="powerups">
+  <h2>Power-ups</h2>
+  <div class="pp"><div><span aria-hidden="true">🛡️</span><b>Shield</b><i>Honest and reliable</i></div><div><span aria-hidden="true">💬</span><b>Clear comms</b><i>Plain, regular updates</i></div><div><span aria-hidden="true">⚡</span><b>Speed boost</b><i>Quick learner</i></div><div><span aria-hidden="true">🔎</span><b>Scout</b><i>Research-minded</i></div><div><span aria-hidden="true">🎯</span><b>Multi-quest</b><i>Many projects at once</i></div><div><span aria-hidden="true">🌿</span><b>Git</b><i>GitHub and Bitbucket</i></div><div><span aria-hidden="true">📋</span><b>Team tools</b><i>Asana, Jira, Slack</i></div><div><span aria-hidden="true">📱</span><b>Pixel-true</b><i>Figma to responsive code</i></div><div><span aria-hidden="true">🚀</span><b>Fast sites</b><i>Caching, SEO, hosting</i></div><div><span aria-hidden="true">🤖</span><b>AI workflow</b><i>Claude Code, reviewed diffs</i></div></div>
+</section>
+
+<section id="contact">
+  <h2>Let’s build something great</h2>
+  <div class="cab">
+    <div class="slot" aria-hidden="true"></div>
+    <p class="px insert blink">INSERT COIN</p>
+    <p>New project? Tell me what you are building and I will reply by email.</p>
+    <form id="cf">
+      <input id="cn" placeholder="Your name" aria-label="Your name" required>
+      <textarea id="cm" rows="3" placeholder="What are we building?" aria-label="Your message" required></textarea>
+      <button class="btn" type="submit">Start game</button>
+    </form>
+    <p>Or write directly: <a href="mailto:campbelleva46@gmail.com">campbelleva46@gmail.com</a> <button id="ce" type="button">Copy email</button> <span id="cok" class="status" hidden>Copied.</span></p>
+    <p class="px cont" id="cont">CONTINUE? 9</p>
+  </div>
+  <p class="status">Psst: try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) or tap the coin.</p>
+</section>
+
+<footer>Made with neon, caffeine and clean code.</footer>
+
+<script>
+var skills=[["WordPress",92],["Shopify",88],["PHP / Laravel",85],["React / Next.js / Node.js",90],["Funnels (HighLevel, ClickFunnels)",90],["Figma / UI design",86],["Automation (Zapier, CRM)",84],["AI-assisted development",80],["Claude Code",82],["Vercel deploys",80],["Git / GitHub / Bitbucket",88],["MySQL",82],["SEO / Analytics / Tracking",84]];
+var box=document.getElementById('bars');
+skills.forEach(function(s){var d=document.createElement('div');d.innerHTML='<span>'+s[0]+'</span><div class="bar"><i data-w="'+s[1]+'"></i></div>';box.appendChild(d)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%'}})},{threshold:.4});
+document.querySelectorAll('.bar i').forEach(function(i){io.observe(i)});
+var n=0,c=document.getElementById('coins'),st=document.getElementById('status');
+function coin(){n++;c.textContent=n;st.textContent=n>=10?'Level up! Eva is hireable.':'Coin collected.'}
+document.getElementById('coin').onclick=function(){var g=document.getElementById('game');g.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});st.textContent='Bonus stage. Tap the stage to play.'};
+var t=document.getElementById('theme'),rt=document.documentElement;
+function curTheme(){return rt.dataset.theme||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark')}
+function paintBtn(){t.textContent=curTheme()==='dark'?'\u2600':'\uD83C\uDF19'}
+t.onclick=function(){rt.dataset.theme=curTheme()==='dark'?'light':'dark';paintBtn()};
+paintBtn();
+document.getElementById('copy').onclick=function(){
+ var txt='# Project playbook\n\n## Stack\n- Next.js, Node.js, deployed on Vercel\n\n## Rules\n- Small tasks, one change at a time\n- Never touch .env or secrets\n- Show a diff; wait for review\n';
+ var done=false;try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).catch(function(){});done=true}}catch(e){}
+ if(!done){var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove()}
+ var m=document.getElementById('copied');m.hidden=false;setTimeout(function(){m.hidden=true},1800)};
+var cb=document.getElementById('coin');cb.addEventListener('click',function(){cb.classList.remove('spin');void cb.offsetWidth;cb.classList.add('spin')});
+var sess=document.getElementById('sess'),full=sess.textContent,k=0;
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){sess.textContent='';(function type(){sess.textContent=full.slice(0,++k);if(k<full.length)setTimeout(type,25)})()}
+if(!('IntersectionObserver' in window)){document.querySelectorAll('.bar i').forEach(function(i){i.style.width=i.dataset.w+'%'})}
+var EM='campbelleva46@gmail.com';
+document.getElementById('cf').onsubmit=function(e){e.preventDefault();var nm=document.getElementById('cn').value,ms=document.getElementById('cm').value;
+ var a=document.createElement('a');a.href='mailto:'+EM+'?subject='+encodeURIComponent('New project from '+nm)+'&body='+encodeURIComponent(ms+'\n\n'+nm);a.target='_blank';document.body.appendChild(a);a.click();a.remove();
+ n+=5;coin();st.textContent='Player 1 joined. Your email app should open.'};
+document.getElementById('ce').onclick=function(){var ok=false;try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(EM).catch(function(){});ok=true}}catch(x){}
+ if(!ok){var t2=document.createElement('textarea');t2.value=EM;t2.style.position='fixed';t2.style.opacity='0';document.body.appendChild(t2);t2.select();try{document.execCommand('copy')}catch(x){}t2.remove()}
+ var m=document.getElementById('cok');m.hidden=false;setTimeout(function(){m.hidden=true},1800)};
+var cn=9,ct=document.getElementById('cont');if(!matchMedia('(prefers-reduced-motion:reduce)').matches){setInterval(function(){cn=cn<=0?9:cn-1;ct.textContent='CONTINUE? '+cn},1000)}
+(function(){
+var cv=document.getElementById('cv'),cx=cv.getContext('2d'),gs=document.getElementById('gs'),stage=document.getElementById('stage');
+var W=900,H=240,G=200,S=3,state='idle',py=G,vy=0,sp=5,ob=[],co=[],tm=200,dist=0,sc=0,best=0,vis=false,looping=false,lastT=0;
+var SP=[[3,0,6,1,'a'],[2,1,8,2,'a'],[2,3,1,3,'a'],[9,3,1,3,'a'],[3,3,6,3,'#ffcf9e'],[4,4,1,1,'#1a1030'],[7,4,1,1,'#1a1030'],[2,6,8,5,'b'],[5,7,2,2,'d'],[3,11,6,2,'#2a2060']];
+var LA=[[3,13,2,2,'#2a2060'],[7,13,2,2,'#2a2060'],[3,15,3,1,'#fff'],[7,15,3,1,'#fff']];
+var LB=[[4,13,2,2,'#2a2060'],[6,13,2,2,'#2a2060'],[3,15,3,1,'#fff'],[6,15,3,1,'#fff']];
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function start(){py=G;vy=0;sp=5;ob=[];co=[];tm=200;dist=0;sc=0;state='run';gs.textContent='Go! Tap to jump.'}
+function tap(){if(state!=='run'){start();return}if(py>=G-0.5)vy=-11.5}
+function over(){state='over';best=Math.max(best,sc);gs.textContent='Game over. Coins this run: '+sc+'. Best: '+best+'. Tap to retry.'}
+function update(dt){
+ dist+=sp*dt;sp+=0.0015*dt;vy+=0.6*dt;py+=vy*dt;if(py>=G){py=G;vy=0}
+ tm-=sp*dt;
+ if(tm<=0){var w=26+Math.random()*10;ob.push({x:W+10,w:w,h:28+Math.random()*22});if(Math.random()<.7)co.push({x:W+10+w/2,y:G-72-Math.random()*26});tm=270+Math.random()*260}
+ ob.forEach(function(o){o.x-=sp*dt});co.forEach(function(c){c.x-=sp*dt});
+ ob=ob.filter(function(o){return o.x+o.w>-10});co=co.filter(function(c){return c.x>-20});
+ for(var i=0;i<ob.length;i++){var o=ob[i];if(100>o.x&&76<o.x+o.w&&py>G-o.h+4){over();return}}
+ for(var k=co.length-1;k>=0;k--){var c=co[k];if(Math.abs(c.x-88)<26&&c.y>py-54&&c.y<py+10){co.splice(k,1);sc++;coin();gs.textContent='Coins this run: '+sc}}
+}
+function draw(){
+ var a=css('--a'),b=css('--b'),pn=css('--panel'),ln=css('--line'),tx=css('--text');
+ cx.fillStyle=pn;cx.fillRect(0,0,W,H);cx.fillStyle=ln;cx.fillRect(0,G,W,H-G);cx.fillStyle=b;cx.fillRect(0,G,W,3);
+ cx.globalAlpha=.4;for(var i=0;i<16;i++){cx.fillRect(i*60-(dist%60),G+16,24,3)}cx.globalAlpha=1;
+ ob.forEach(function(o){cx.fillStyle=a;cx.fillRect(o.x,G-o.h,o.w,o.h);cx.fillStyle=b;cx.fillRect(o.x,G-o.h,o.w,4)});
+ co.forEach(function(c){cx.fillStyle='#ffcf3a';cx.beginPath();cx.arc(c.x,c.y,12,0,6.3);cx.fill();cx.fillStyle='#fff6c8';cx.fillRect(c.x-5,c.y-6,3,10)});
+ var legs=(py<G||Math.floor(dist/30)%2===0)?LA:LB,top=py-48;
+ SP.concat(legs).forEach(function(r){var q=r[4];cx.fillStyle=q==='a'?a:q==='b'?b:q==='d'?'#0a7f93':q;cx.fillRect(70+r[0]*S,top+r[1]*S,r[2]*S,r[3]*S)});
+ cx.fillStyle=tx;cx.font="14px 'Press Start 2P',monospace";cx.textBaseline='top';cx.textAlign='left';cx.fillText('COINS '+sc+'   BEST '+best,14,14);
+ if(state!=='run'){cx.textAlign='center';cx.fillStyle=a;cx.font="20px 'Press Start 2P',monospace";cx.fillText(state==='over'?'GAME OVER':'TAP TO START',W/2,80);cx.font="12px 'Press Start 2P',monospace";cx.fillStyle=tx;cx.fillText(state==='over'?'tap to retry':'tap to jump',W/2,116)}
+}
+function frame(t){if(!vis){looping=false;return}var dt=Math.min((t-lastT)/16.7,3);lastT=t;if(state==='run')update(dt);draw();requestAnimationFrame(frame)}
+new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis&&!looping){looping=true;lastT=performance.now();requestAnimationFrame(frame)}},{threshold:.1}).observe(stage);
+stage.addEventListener('pointerdown',function(e){e.preventDefault();tap()});
+stage.addEventListener('keydown',function(e){if(e.code==='Space'||e.key==='Enter'){e.preventDefault();tap()}});
+})();
+var seq=[38,38,40,40,37,39,37,39,66,65],p=0;
+addEventListener('keydown',function(e){p=(e.keyCode===seq[p])?p+1:0;if(p===seq.length){p=0;n+=30;coin();st.textContent='Cheat code accepted. +30 coins.'}});
+</script>
+</body>
+</html>
